@@ -65,7 +65,7 @@ const item = {
 
 export default function Services() {
   return (
-    <section id="services" className="relative py-24 md:py-32">
+    <section id="services" className="relative scroll-mt-24 py-24 md:scroll-mt-28 md:py-32">
       <div className="mx-auto max-w-7xl px-5 md:px-10">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-xs uppercase tracking-[0.3em] text-gold">What We Do</p>

@@ -26,7 +26,7 @@ const STEPS = [
 
 export default function Process() {
   return (
-    <section id="process" className="relative py-24 md:py-32">
+    <section id="process" className="relative scroll-mt-24 py-24 md:scroll-mt-28 md:py-32">
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gold/8 blur-[130px]" />
       <div className="relative mx-auto max-w-6xl px-5 md:px-10">
         <div className="mx-auto max-w-2xl text-center">

@@ -11,7 +11,7 @@ const POINTS = [
 
 export default function About() {
   return (
-    <section id="about" className="relative py-24 md:py-32">
+    <section id="about" className="relative scroll-mt-24 py-24 md:scroll-mt-28 md:py-32">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-5 md:grid-cols-2 md:px-10">
         <motion.div
           initial={{ opacity: 0, x: -30 }}

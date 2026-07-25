@@ -20,6 +20,22 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const handleNavClick = (event, href) => {
+    if (!href.startsWith("#")) return;
+
+    event.preventDefault();
+    const targetId = href.slice(1);
+    const target = document.getElementById(targetId);
+
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      window.location.hash = href;
+    }
+
+    setOpen(false);
+  };
+
   return (
     <header
       className={`fixed top-0 z-50 w-full transition-all duration-500 ${
@@ -50,6 +66,7 @@ export default function Navbar() {
             <a
               key={l.href}
               href={l.href}
+              onClick={(event) => handleNavClick(event, l.href)}
               className="relative text-sm tracking-wide text-cream/85 transition-colors hover:text-gold-light after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-gold after:transition-all after:duration-300 hover:after:w-full"
             >
               {l.label}
@@ -89,7 +106,7 @@ export default function Navbar() {
                 <a
                   key={l.href}
                   href={l.href}
-                  onClick={() => setOpen(false)}
+                  onClick={(event) => handleNavClick(event, l.href)}
                   className="rounded-lg px-2 py-3 text-base text-cream/90 transition-colors hover:bg-gold/10 hover:text-gold-light"
                 >
                   {l.label}
