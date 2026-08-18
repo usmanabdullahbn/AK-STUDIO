@@ -12,6 +12,9 @@ export default function App() {
     <div className="relative min-h-screen overflow-x-hidden bg-ink">
       <Navbar />
       <main>
+        <div className="flex items-center justify-center h-screen">
+          <h1 className="text-4xl font-bold text-white">Simple</h1>
+        </div>
         <Hero />
         <Services />
         <Process />
